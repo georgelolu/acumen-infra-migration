@@ -1,0 +1,28 @@
+name: Self-Hosted Runner Test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  runner-test:
+    runs-on: [self-hosted, linux, x64, acumen, nomad]
+
+    steps:
+      - name: Show runner information
+        run: |
+          echo "Runner: $RUNNER_NAME"
+          echo "OS: $(uname -s)"
+          echo "Architecture: $(uname -m)"
+          echo "Hostname: $(hostname)"
+
+      - name: Verify Docker
+        run: |
+          docker --version
+
+      - name: Verify Nomad
+        run: |
+          nomad version || echo "Nomad command not available"
+
+      - name: Verify Git
+        run: |
+          git --version
