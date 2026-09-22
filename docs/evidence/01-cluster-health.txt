@@ -1,0 +1,23 @@
+ACUMEN INFRASTRUCTURE — CLUSTER HEALTH EVIDENCE
+Captured: 2026-09-22
+
+========== CONSUL MEMBERS ==========
+Node           Address           Status  Type    Build   Protocol  DC      Partition  Segment
+acumen-node-1  10.20.21.10:8301  alive   server  1.21.4  2         acumen  default    <all>
+acumen-node-2  10.20.22.10:8301  alive   server  1.21.4  2         acumen  default    <all>
+acumen-node-3  10.20.23.10:8301  alive   server  1.21.4  2         acumen  default    <all>
+
+========== NOMAD SERVERS ==========
+Name                  Address      Port  Status  Leader  Raft Version  Build  Datacenter  Region
+acumen-node-1.global  10.20.21.10  4648  alive   true    3             2.0.7  acumen      global
+acumen-node-2.global  10.20.22.10  4648  alive   false   3             2.0.7  acumen      global
+acumen-node-3.global  10.20.23.10  4648  alive   false   3             2.0.7  acumen      global
+
+========== NOMAD CLIENTS ==========
+ID        Node Pool  DC      Name           Class   Drain  Eligibility  Status
+0c515c11  default    acumen  acumen-node-3  <none>  false  eligible     ready
+90c84d68  default    acumen  acumen-node-2  <none>  false  eligible     ready
+4e823e37  default    acumen  acumen-node-1  <none>  false  eligible     ready
+
+========== DNSMASQ ==========
+active

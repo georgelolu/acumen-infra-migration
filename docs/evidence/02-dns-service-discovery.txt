@@ -1,0 +1,23 @@
+ACUMEN INFRASTRUCTURE — DNS / SERVICE DISCOVERY EVIDENCE
+Captured: 2026-09-22
+
+========== DNSMASQ STATUS ==========
+active
+
+========== DNSMASQ CONFIG ==========
+server=/consul/127.0.0.1#8600
+listen-address=127.0.0.1
+bind-interfaces
+cache-size=1000
+
+========== CONSUL DNS ==========
+10.20.21.10
+
+========== DNSMASQ RESOLUTION ==========
+10.20.21.10
+
+Resolution tested:
+acumen-node-1.node.consul
+
+DNS path:
+Client → dnsmasq :53 → Consul DNS :8600 → 10.20.21.10
