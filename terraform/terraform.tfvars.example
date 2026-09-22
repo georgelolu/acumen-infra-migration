@@ -1,0 +1,23 @@
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "acumen"
+
+vpc_cidr = "10.20.0.0/16"
+
+# Replace with YOUR public IP.
+# Example:
+# allowed_ssh_cidr = "41.58.100.20/32"
+allowed_ssh_cidr = "YOUR_PUBLIC_IP/32"
+
+ssh_key_name = "YOUR_EXISTING_AWS_KEYPAIR"
+
+instance_type         = "t3.micro"
+bastion_instance_type = "t3.micro"
+
+consul_version = "1.21.4"
+nomad_version  = "2.0.7"
+
+github_runner_enabled = false
+github_repository     = ""
+github_runner_name    = "acumen-node-1-runner"
+github_runner_token   = ""
