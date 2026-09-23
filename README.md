@@ -18,6 +18,28 @@ The infrastructure is provisioned automatically with **Terraform** and validated
 * HTTP application health testing
 * GitHub Actions self-hosted runner execution
 
+
+## Project Snapshot
+
+| Area | Implementation |
+|---|---|
+| **Cloud** | AWS |
+| **Infrastructure as Code** | Terraform |
+| **Orchestration** | HashiCorp Nomad |
+| **Service Discovery** | HashiCorp Consul + dnsmasq |
+| **Automation** | GitHub Actions + self-hosted runner |
+| **Remote Management** | AWS Systems Manager |
+| **Architecture** | 3-node multi-AZ HA cluster |
+| **Validation** | Cluster health, DNS, workload, HTTP 200, and CI |
+
+### Key Evidence
+
+- 📸 [Visual Evidence](#visual-evidence)
+- ✅ [Validation Results](#validation-results)
+- 🤖 [Self-Hosted GitHub Actions Runner](#github-actions-self-hosted-runner)
+- 🏗️ [Terraform Structure](#terraform-structure)
+- 📄 [Evidence Files](#evidence-files)
+
 ---
 
 ## Project Overview
